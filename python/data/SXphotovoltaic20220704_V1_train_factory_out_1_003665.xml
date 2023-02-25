@@ -1,0 +1,35 @@
+<?xml version="1.0" ?><annotation>
+  <folder>cvat/shangxin/photovoltaic/factory</folder>
+  <filename>SXphotovoltaic20220704_V1_train_factory_out_1_003665.jpg</filename>
+  <source>
+    <database>Unknown</database>
+    <annotation>Unknown</annotation>
+    <image>Unknown</image>
+  </source>
+  <size>
+    <width>640</width>
+    <height>512</height>
+    <depth/>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>photovoltaic_panels</name>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>1.03</xmin>
+      <ymin>362.06</ymin>
+      <xmax>123.61</xmax>
+      <ymax>458.77</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>photovoltaic_panels</name>
+    <occluded>0</occluded>
+    <bndbox>
+      <xmin>1.03</xmin>
+      <ymin>97.16</ymin>
+      <xmax>125.2</xmax>
+      <ymax>199.41</ymax>
+    </bndbox>
+  </object>
+</annotation>

@@ -109,19 +109,19 @@ STATUS SampleAlgorithm::Process(const JiImageInfo &frame, const char* dynamicArg
     // 算法处理    
     mDetector->ProcessImage(mOutputFrame, detectedObjects, mConfig.algoConfig.thresh);    
     
-    // for (auto &obj : detectedObjects)
-    // {
-    //     for (auto &roiPolygon : mConfig.currentROIOrigPolygons)
-    //     {
-    //         int mid_x = (obj.x1 + obj.x2) / 2;
-    //         int mid_y = (obj.y1 + obj.y2) / 2;
-    //         // 当检测的目标的中心点在ROI内的话，就视为闯入ROI的有效目标
-    //         if (WKTParser::inPolygon(roiPolygon, cv::Point(mid_x, mid_y)))
-    //         {
-    //             validTargets.emplace_back(obj);
-    //         }           
-    //     }
-    // }
+     for (auto &obj : detectedObjects)
+     {
+         for (auto &roiPolygon : mConfig.currentROIOrigPolygons)
+         {
+             int mid_x = (obj.x1 + obj.x2) / 2;
+             int mid_y = (obj.y1 + obj.y2) / 2;
+             // 当检测的目标的中心点在ROI内的话，就视为闯入ROI的有效目标
+             if (WKTParser::inPolygon(roiPolygon, cv::Point(mid_x, mid_y)) && (obj.label!=0))
+             {
+                 validTargets.emplace_back(obj);
+             }
+         }
+     }
      for (auto &obj : detectedObjects)
      {
          if(obj.label != 1)

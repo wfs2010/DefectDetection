@@ -16,7 +16,7 @@ The detailed information in the directory python.
 cd /workspace/github/DefectDetection/python/yolov5
 
 echo "Prepare environment..."
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r ../requirements.txt
 
 echo "Processing data..."
 python ../preprocess.py

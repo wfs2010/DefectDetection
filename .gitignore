@@ -1,3 +1,5 @@
 /python/model/
 /python/model/yolov5s.pt
 /python/data/
+/python/data/
+/test/build/CMakeFiles/

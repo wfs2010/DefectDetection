@@ -110,8 +110,8 @@ cmake .. && make install
 ```
 ### results
 
-- F1-Score: 0.7355
-- Performance: 61.7815
+- F1-Score: 0.8386
+- Performance: 69.6169
 
 - ![img_1.png](img_1.png)
 
